@@ -26,9 +26,6 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 driver.manage().window().maximize();
 driver.get("http://10.232.237.143:443/TestMeApp/fetchcat.htm");
 }
-
-
-
 @When("User executive provides {string} and {string} as credentials")
 public void team_executive_provides_and_as_credentials(String string, String string2)
 {
@@ -48,15 +45,17 @@ public void login_is_successful()
 System.out.println("Login successful");
 }
 
+
+
+
+
 @Given("User is at signup for testmeApp")
 public void team_is_at_signup_for_testmeApp()
 {
    // Write code here that turns the phrase above into concrete actions
    //throw new cucumber.api.PendingException();
 System.out.println("SignUp");
-
 }
-
 @When("User provides {string}")
 public void team_provides(String string)
 {
@@ -64,7 +63,6 @@ public void team_provides(String string)
    //throw new cucumber.api.PendingException();
 driver.findElement(By .name("userName")).sendKeys(string);
 }
-
 @Then("User provides {string} , {string} , {string} , {string}")
 public void team_provides(String string, String string2, String string3, String string4)
 {
@@ -75,7 +73,6 @@ driver.findElement(By .name("lastName")).sendKeys(string2);
 driver.findElement(By .name("password")).sendKeys(string3);
 driver.findElement(By .name("confirmPassword")).sendKeys(string4);
 }
-
 @Then("User continues to provides {string} , {string} , {string} , {string} , {string} , {string} , {string}")
 public void team_provides(String string, String string2, String string3, String string4, String string5, String string6, String string7)
 {
@@ -128,6 +125,18 @@ public void team_verifies_the_product_availability()
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 @Given("User proceeds to payment without adding any item in the cart")
 public void team_proceeds_to_payment_without_adding_any_item_in_the_cart()
 {
@@ -138,14 +147,9 @@ public void team_proceeds_to_payment_without_adding_any_item_in_the_cart()
 	driver.findElement(By .name("password")).sendKeys("password123");
 	driver.findElement(By .name("Login")).click();
 	driver.findElement(By .xpath("//*[@id=\"myInput\"]")).sendKeys("HeadPhone");
-	driver.findElement(By .xpath("/html/body/div[1]/form/input")).click();
-	
-	
-Assert.assertNotSame("View Cart", driver.getTitle());
-
-
+	driver.findElement(By .xpath("/html/body/div[1]/form/input")).click();	
+    Assert.assertNotSame("View Cart", driver.getTitle());
 }
-
 @Then("TestMeApp doesnot display the cart icon")
 public void testmeapp_doesnot_display_the_cart_icon()
 {
@@ -153,16 +157,13 @@ public void testmeapp_doesnot_display_the_cart_icon()
    //throw new cucumber.api.PendingException();
 System.out.println("Cart symbol not found");
 }
-
 @When("User proceeds to payment with adding any item to the cart")
 public void team_proceeds_to_payment_with_adding_any_item_to_the_cart()
 {
    // Write code here that turns the phrase above into concrete actions
    //throw new cucumber.api.PendingException();
 driver.findElement(By .xpath("/html/body/section/div/div/div[2]/div/div/div/div[2]/center/a")).click();
-
 }
-
 @Then("TestMeApp displays cart icon")
 public void testmeapp_displays_cart_icon()
 {
@@ -171,5 +172,9 @@ public void testmeapp_displays_cart_icon()
 driver.findElement(By .xpath("//*[@id=\"header\"]/div[1]/div/div/div[2]/div/a[2]")).click();
 System.out.println(driver.getTitle());
 }
-
 }
+
+
+
+
+
