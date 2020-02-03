@@ -1,0 +1,84 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 67852212600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User executive login",
+            "match": {
+              "location": "CaseStudy.team_executive_login()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-31T07:32:16.236Z",
+        "line": 25,
+        "name": "Login",
+        "description": "",
+        "id": "testmeapp;login;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11506365000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User executive provides \"Lalitha\" and \"password123\" as credentials",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lalitha\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"password123\"",
+                  "offset": 38
+                }
+              ],
+              "location": "CaseStudy.team_executive_provides_and_as_credentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 146200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Login is successful",
+            "match": {
+              "location": "CaseStudy.login_is_successful()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
+          }
+        ]
+      }
+    ],
+    "name": "TestMeApp",
+    "description": "",
+    "id": "testmeapp",
+    "keyword": "Feature",
+    "uri": "file:csdemo.feature",
+    "tags": []
+  }
+]
